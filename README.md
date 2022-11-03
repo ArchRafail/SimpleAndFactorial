@@ -27,7 +27,7 @@ Program catch it. Path correct.</br>
 3. Enter quantity of random numbers - f.</br>
 Program will show you an error. Incorrect type of input data.</br>
 4. Enter quantity of random numbers - 0. Or either, you can enter - -5.</br>
-Program will show you an error. Length of array should be more than 0.</br>
+Program will show you an error. Quantity of numbers should be more than 0.</br>
 5. Enter quantity of random numbers. For example - 10.</br>
 Program will show you the contents of file with random numbers, file with prime numbers and file with factorial numbers.</br>
 3 files in folder near main file (point 2) were created. You can check them with Windows Explorer.
