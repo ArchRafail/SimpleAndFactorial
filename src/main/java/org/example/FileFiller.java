@@ -14,9 +14,13 @@ public class FileFiller implements Runnable {
         return filepath;
     }
 
+    /**
+     When method ask you to enter the path to file, enter YourPath\SimpleAndFactorial\src\main\resources\example.txt.
+     For example D:\Projects\Java\SimpleAndFactorial\src\main\resources\example.txt.
+     */
     private String pathToFile() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Input the full path to file: ");
+        System.out.print("Input the full path to file where we will put the numbers: ");
         String prePath = scanner.nextLine();
         try {
             Paths.get(prePath);
@@ -37,15 +41,21 @@ public class FileFiller implements Runnable {
         return filepath.substring(0, (filepath.lastIndexOf("\\")-1));
     }
 
+    /**
+     When method ask you to enter the quantity of numbers, input 15.
+     */
     private int numbersQuantity() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input the quantity of numbers: ");
         int number;
         try {
             number = scanner.nextInt();
+            if (number <= 0) throw new NegativeArraySizeException();
         }
         catch(InputMismatchException ex) {
             throw new RuntimeException("The quantity of numbers has to be in integer format!");
+        } catch (NegativeArraySizeException ex) {
+        throw new RuntimeException("The quantity of numbers has to be more then 0!");
         }
         return number;
     }

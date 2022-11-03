@@ -11,7 +11,7 @@ public class Main {
         try {
             fillerThread.join();
         } catch (InterruptedException e) {
-            throw new RuntimeException(fillerThread.getName() + " can't be forced!");
+            throw new RuntimeException(fillerThread.getName() + " interrupted!");
         }
         lookerThread.start();
         factorialThread.start();
